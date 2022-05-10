@@ -1,0 +1,8 @@
+.vscode
+app_obstacle_avoidance/build
+app_obstacle_avoidance/.built-in.o.cmd
+app_obstacle_avoidance/built-in.o
+app_obstacle_avoidance/src/.built-in.o.cmd
+app_obstacle_avoidance/src/.obstacle_avoidance.o.cmd
+app_obstacle_avoidance/src/built-in.o
+app_obstacle_avoidance/src/obstacle_avoidance.o
