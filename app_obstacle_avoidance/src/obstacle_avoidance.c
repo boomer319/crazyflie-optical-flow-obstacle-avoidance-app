@@ -16,11 +16,17 @@
 #include <math.h>
 #include "usec_time.h"
 
+#include "uart1.h"
+
 static uint8_t count;
+static uint8_t byte;
+static int8_t yaw_command;
 
 void appMain()
 {
-  vTaskDelay(M2T(3000));
+  vTaskDelay(M2T(1000));
+  uart1Init(115200);
+  vTaskDelay(M2T(1000));
   // // Getting the Logging IDs of the state estimates
   // logVarId_t idStabilizerYaw = logGetVarId("stabilizer", "yaw");
   // logVarId_t idHeightEstimate = logGetVarId("stateEstimate", "z");
@@ -43,7 +49,9 @@ void appMain()
     // uint8_t aiInit = paramGetUint(idAIdeck);
 
     count += 1;
+    uart1GetDataWithTimeout(&byte, portMAX_DELAY);
 
+    yaw_command = byte;
   }
 }
 
@@ -55,4 +63,5 @@ void appMain()
 
 LOG_GROUP_START(app)
 LOG_ADD(LOG_UINT8, number_counter, &count)
+LOG_ADD(LOG_INT8, yaw_command, &yaw_command)
 LOG_GROUP_STOP(app)
