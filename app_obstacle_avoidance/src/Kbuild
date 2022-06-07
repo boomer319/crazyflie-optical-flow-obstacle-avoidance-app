@@ -1,1 +1,2 @@
 obj-y += obstacle_avoidance.o
+obj-y += wallfollowing_multiranger_onboard.o
