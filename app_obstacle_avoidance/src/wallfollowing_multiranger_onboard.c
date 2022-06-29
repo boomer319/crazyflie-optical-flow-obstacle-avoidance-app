@@ -18,7 +18,7 @@ The same wallfollowing strategy was used in the following paper:
 #include <math.h>
 
 // variables
-static float maxForwardSpeed = 0.2f;
+static float maxForwardSpeed = 0.0f;
 // static float maxTurnRate = 0.5f;
 static float firstRun = false;
 static float prevHeading = 0.0f;

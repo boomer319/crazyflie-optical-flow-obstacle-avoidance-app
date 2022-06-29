@@ -144,7 +144,7 @@ void appMain()
       float estYawDeg = logGetFloat(idStabilizerYaw);
       float estYawRad = estYawDeg * (float)M_PI / 180.0f;
 
-      cmdVelX = 0.0f;
+      cmdVelX = maxForwardSpeed;
       cmdVelY = 0.0f;
       cmdAngWRad = 0.0f;
       cmdAngWDeg = 0.0f;
