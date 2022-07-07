@@ -99,8 +99,8 @@ void appMain()
 
   DEBUG_PRINT("Waiting for activation ...\n");
 
-  yaw_gain_proportional = 3*0.021;
-  yaw_gain_derivative = 3*0.003;
+  yaw_gain_proportional = 0.021/5*3;
+  yaw_gain_derivative = 0.003/5*3;
 
   yaw_command = 0;
 
