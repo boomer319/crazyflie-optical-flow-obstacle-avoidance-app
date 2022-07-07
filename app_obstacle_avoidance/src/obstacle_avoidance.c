@@ -36,7 +36,7 @@ double yaw_rate;
 
 float heightEstimate;
 
-float maxForwardSpeed = 0.5f;
+float maxForwardSpeed = 0.2f;
 static const float hoverHeight = 0.5f;
 
 float cmdVelX = 0.0f;

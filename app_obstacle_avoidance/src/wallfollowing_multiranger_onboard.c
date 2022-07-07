@@ -18,7 +18,7 @@ The same wallfollowing strategy was used in the following paper:
 #include <math.h>
 
 // variables
-static float maxForwardSpeed = 0.0f;
+static float maxForwardSpeed = 0.2f;
 // static float maxTurnRate = 0.5f;
 static float firstRun = false;
 static float prevHeading = 0.0f;
@@ -91,7 +91,7 @@ StateWF wallFollower(float *cmdVelX, float *cmdVelY, float *cmdAngW, float *cmdH
   switch (stateWF)
   {
   case forward:
-    cmdVelXTemp = 0.0f;
+    cmdVelXTemp = maxForwardSpeed;
     cmdVelYTemp = 0.0f;
     if (yawRate > 0.1 ||  yawRate < -0.1)
     {
