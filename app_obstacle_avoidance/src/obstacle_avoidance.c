@@ -36,7 +36,7 @@ double yaw_rate;
 
 float heightEstimate;
 
-float maxForwardSpeed = 0.5f;
+float maxForwardSpeed = 0.2f;
 static const float hoverHeight = 0.5f;
 
 float cmdVelX = 0.0f;
@@ -99,8 +99,8 @@ void appMain()
 
   DEBUG_PRINT("Waiting for activation ...\n");
 
-  yaw_gain_proportional = 3*0.021;
-  yaw_gain_derivative = 3*0.003;
+  yaw_gain_proportional = 0.021/5*3;
+  yaw_gain_derivative = 0.003/5*3;
 
   yaw_command = 0;
 
@@ -144,7 +144,7 @@ void appMain()
       float estYawDeg = logGetFloat(idStabilizerYaw);
       float estYawRad = estYawDeg * (float)M_PI / 180.0f;
 
-      cmdVelX = 0.0f;
+      cmdVelX = maxForwardSpeed;
       cmdVelY = 0.0f;
       cmdAngWRad = 0.0f;
       cmdAngWDeg = 0.0f;
