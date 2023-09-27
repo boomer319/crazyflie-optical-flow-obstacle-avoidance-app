@@ -1,3 +1,44 @@
+/**
+ * ,---------,       ____  _ __
+ * |  ,-^-,  |      / __ )(_) /_______________ _____  ___
+ * | (  O  ) |     / __  / / __/ ___/ ___/ __ `/_  / / _ \
+ * | / ,--´  |    / /_/ / / /_/ /__/ /  / /_/ / / /_/  __/
+ *    +------`   /_____/_/\__/\___/_/   \__,_/ /___/\___/
+ *
+ * Crazyflie control firmware
+ *
+ * Copyright (C) 2021 Bitcraze AB
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, in version 3.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ *
+ *
+ * based on wall_follower.c - App layer application of the wall following demo. Modified for optical flow-based obstacle avoidance.
+ *
+ * The same wallfollowing strategy was used in the following paper:
+
+ @article{mcguire2019minimal,
+  title={Minimal navigation solution for a swarm of tiny flying robots to explore an unknown environment},
+  author={McGuire, KN and De Wagter, Christophe and Tuyls, Karl and Kappen, HJ and de Croon, Guido CHE},
+  journal={Science Robotics},
+  volume={4},
+  number={35},
+  year={2019},
+  publisher={Science Robotics}
+}
+
+ */
+
+
 #include <string.h>
 #include <stdint.h>
 #include <stdbool.h>
